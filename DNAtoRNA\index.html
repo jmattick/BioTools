@@ -1,0 +1,36 @@
+<html>
+<h1>Translate DNA to RNA</h1>
+<h4>DNA Sequence:</h4>
+<textarea id = "inSeq"></textarea>
+<br>
+<button id="myButt" onclick = "myFun()">Translate!</button>
+<h4>RNA Sequence:</h4>
+<textarea id = "output"></textarea>
+<!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script>
+	function myFun() {
+		var t = document.getElementById('inSeq').value;
+		t= t.toUpperCase();
+		u = t.replace(/T/gi, "U");
+		$("#output").text(u);
+	};
+	
+</script>
+<style>
+	h1 {
+	text-align: center;
+	}
+	textarea {
+	height: 25%;
+	width: 100%;
+	}
+	p {
+	width: 100%;
+	}
+</style>
+<html>
