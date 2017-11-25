@@ -30,6 +30,8 @@
 				u[i] = t[i].replace(/G/gi, "C");
 			} else if (t[i] == "T") {
 				u[i] = t[i].replace(/T/gi, "A");
+			} else {
+				u[i] = t[i];
 			}
 		};
 		u = u.join("");
