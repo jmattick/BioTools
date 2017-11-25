@@ -1,0 +1,94 @@
+<html>
+<h1>Nucleotide Content</h1>
+<h4>DNA Sequence:</h4>
+<textarea id = "inSeq"></textarea>
+<br>
+<button id="myButt" onclick = "myFun()">Calculate</button>
+<h4></h4>
+<table>
+<tr>
+	<th></th>
+	<th>A</th>
+	<th>C</th>
+	<th>G</th>
+	<th>T</th>
+</tr>
+<tr>
+	<th>#</th>
+	<th id="An"></th>
+	<th id="Cn"></th>
+	<th id="Gn"></th>
+	<th id="Tn"></th>
+</tr>
+<tr>
+	<th>%</th>
+	<th id="Ap"></th>
+	<th id="Cp"></th>
+	<th id="Gp"></th>
+	<th id="Tp"></th>
+</tr>
+
+</table>
+<p id="sum">Total:</p>
+
+<!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script>
+	function myFun() {
+		var t = document.getElementById('inSeq').value;
+		var count = [0,0,0,0];
+		for (var i=0; i<t.length; i++) {
+			var temp = t[i];
+			if (temp == "A") {
+				count[0] +=1;
+			} else if (temp == "C") {
+				count[1] +=1;
+			} else if (temp == "G") {
+				count[2] +=1;
+			}else if (temp == "T") {
+				count[3] +=1;
+			} else {
+				console.log("alternate character")
+			};
+		};
+		var tot = count[0]+count[1]+count[2]+count[3];
+		$("#An").text(count[0]);
+		$("#Cn").text(count[1]);
+		$("#Gn").text(count[2]);
+		$("#Tn").text(count[3]);
+		
+		$("#Ap").text(Math.round(10*count[0]/tot)/10);
+		$("#Cp").text(Math.round(10*count[1]/tot)/10);
+		$("#Gp").text(Math.round(10*count[2]/tot)/10);
+		$("#Tp").text(Math.round(10*count[3]/tot)/10);
+		
+		$("#sum").text("Total: "+tot+" bp");
+	};
+	
+</script>
+<style>
+	h1 {
+	text-align: center;
+	}
+	textarea {
+	height: 25%;
+	width: 100%;
+	}
+	p {
+	width: 100%;
+	}
+	table {
+    border-collapse: collapse;
+	
+	}
+
+	table, th, td {
+	padding: 20px;
+		border: 1px solid black;
+	}
+</style>
+<html>
