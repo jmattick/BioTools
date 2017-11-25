@@ -1,0 +1,53 @@
+<html>
+<h1>Reverse Compliment of a Sequence</h1>
+<h4>DNA Sequence:</h4>
+<textarea id = "inSeq"></textarea>
+<br>
+<button id="myButt" onclick = "myFun()">Convert!</button>
+<h4>Reverse Compliment:</h4>
+<textarea id = "output"></textarea>
+<footer>Want to use Python? <a href = "https://github.com/jmatty16/Python-Bioinformatics/blob/master/Reverse-Compliment.py">See Python Code</a></footer>
+<!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script>
+	function myFun() {
+		var t = document.getElementById('inSeq').value;
+		t= t.toUpperCase();
+		t = t.split("");
+		t = t.reverse();
+		var u = [];
+		
+		for (var i = 0; i< t.length; i++) {
+			if (t[i] == "A") {
+				u[i] = t[i].replace(/A/gi, "T");
+			} else if (t[i] == "C") {
+				u[i] = t[i].replace(/C/gi, "G");
+			} else if (t[i] == "G") {
+				u[i] = t[i].replace(/G/gi, "C");
+			} else if (t[i] == "T") {
+				u[i] = t[i].replace(/T/gi, "A");
+			}
+		};
+		u = u.join("");
+		
+		$("#output").text(u);
+	};
+	
+</script>
+<style>
+	h1 {
+	text-align: center;
+	}
+	textarea {
+	height: 25%;
+	width: 100%;
+	}
+	p {
+	width: 100%;
+	}
+</style>
+<html>
