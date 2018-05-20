@@ -15,10 +15,15 @@
 	padding-top: 20vh;
 	text-align: center;
 	margin: 0 auto;
-	text-shadow: 1px 1px 8px #F2F2F2;
+	color: white;
 }
 .landing-text h1{
 	font-size: 5em;
+	color: white;
+	font-family: 'Ultra', serif;
+}
+.landing-text h3 {
+	color: white;
 }
 section {
     padding-top: 20px;

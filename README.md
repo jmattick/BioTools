@@ -1,7 +1,5 @@
-# Bioinformatics Exercises completed in JavaScript
+# Bioinformatics Solutions as Web Tools
 
-Translate DNA to RNA: https://jmatty16.github.io/JavaScript-Bioinformatics/DNAtoRNA/
+Pushlished: https://jmatty16.github.io/JavaScript-Bioinformatics/
 
-Nucleotide Content: https://jmatty16.github.io/JavaScript-Bioinformatics/Nucleotide-Content/
 
-Reverse Compliment: https://jmatty16.github.io/JavaScript-Bioinformatics/Reverse-Compliment/
