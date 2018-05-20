@@ -12,7 +12,7 @@
 }
 .landing-text{
 	width: 100%;
-	padding-top: 20vh;
+	padding-top: 30vh;
 	text-align: center;
 	margin: 0 auto;
 	color: white;
@@ -21,9 +21,6 @@
 	font-size: 5em;
 	color: white;
 	font-family: 'Ultra', serif;
-}
-.landing-text h3 {
-	color: white;
 }
 section {
     padding-top: 20px;
