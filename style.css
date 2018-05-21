@@ -22,9 +22,21 @@
 	color: white;
 	font-family: 'Ultra', serif;
 }
+
+@media only screen and (max-width: 767px) {
+	.landing-text h1{
+	font-size: 2em;
+	color: white;
+	font-family: 'Ultra', serif;
+	}
+}
+
 section {
     padding-top: 20px;
     padding-bottom: 20px;
+}
+h1 small{
+	text-transform: uppercase;
 }
 h3{
 	color: #29333d;
