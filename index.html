@@ -31,6 +31,23 @@
     </nav>
     <div class = "wrap">
     <div id = "top" class = "jumbotron">
+    
+
+      <!-- helix animation -->
+      <div id = "helix-container" class = "">
+  <div class = "base-pair"><div class = "base base1"></div> <div class = "base base2"></div></div>
+  <div class = "base-pair"><div class = "base base1"></div> <div class = "base base2"></div></div>
+  <div class = "base-pair"><div class = "base base1"></div> <div class = "base base2"></div></div>
+  <div class = "base-pair"><div class = "base base1"></div> <div class = "base base2"></div></div>
+  <div class = "base-pair"><div class = "base base1"></div> <div class = "base base2"></div></div>
+  <div class = "base-pair"><div class = "base base1"></div> <div class = "base base2"></div></div>
+  <div class = "base-pair"><div class = "base base1"></div> <div class = "base base2"></div></div>
+  <div class = "base-pair"><div class = "base base1"></div> <div class = "base base2"></div></div>
+  <div class = "base-pair"><div class = "base base1"></div> <div class = "base base2"></div></div>
+  <div class = "base-pair"><div class = "base base1"></div> <div class = "base base2"></div></div></div>
+
+
+      <!-- landing text -->
       <div class = "landing-text">
       <h1>BioTools</h1>
     </div>
@@ -52,11 +69,31 @@
     </div>
     <section id="python-code">
       <div class = "container">
+        <h1>Python Code <small class="text-muted"> Python scripts for Bioinformatics</small></h1> 
+        <div class="dropdown show">
+  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Python Code
+  </a>
 
-        <h1>Python Code<small class="text-muted"> Python scripts for Bioinformatics</small></h1> 
-        <a href = "https://github.com/jmatty16/Python-Bioinformatics" class = "btn btn-secondary extra">Github</a>
+  <div id = "code-dropdown" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="#1">Convert DNA to RNA</a>
+    <a class="dropdown-item" href="#2">Calculate Protein Molecular Weight</a>
+    <a class="dropdown-item" href="#3">Calculate highest GC%</a>
+    <a class="dropdown-item" href="#4">Counting Nucleotides</a>
+    <a class="dropdown-item" href="#5">Counting Point Mutations</a>
+    <a class="dropdown-item" href="#6">Find Motif in DNA</a>
+    <a class="dropdown-item" href="#7">RNA Splicing</a>
+    <a class="dropdown-item" href="#8">Translate RNA</a>
+    <a class="dropdown-item" href="#9">Transitions and Transversions</a>
+    <a class="dropdown-item" href="#10">Find a Spliced Motif</a>
+    <a class="dropdown-item" href="#11">Find a Shared Motif</a>
+    <a class="dropdown-item" href="#12">Enumerating Gene Orders</a>
+    <a class="dropdown-item" href="#13">Inferring mRNA from Protein</a>
+  </div>
+</div>
+        <a href = "https://github.com/jmatty16/Python-Bioinformatics" id = "github-btn" class = "btn btn-secondary extra">Github</a>
         
-          <h6>Convert DNA to RNA</h6>
+          <h6 id = "1">Convert DNA to RNA</h6>
           <p>
             <script src="https://gist.github.com/jmatty16/7888cf923f71ef0998afea2df637d707.js"></script>
             <noscript>
@@ -74,7 +111,7 @@
             </noscript>
           </p>
 
-          <h6>Calculate Protein Molecular Weight</h6>
+          <h6 id = "2">Calculate Protein Molecular Weight</h6>
           <p>
             <script src="https://gist.github.com/jmatty16/1f7aa8e680e9a469ef42c1b2bc318113.js"></script>
             <noscript>
@@ -93,7 +130,7 @@
           </p>
 
 
-          <h6>Calculate highest GC%</h6>
+          <h6 id = "3">Calculate highest GC%</h6>
           <p>
             <script src="https://gist.github.com/jmatty16/1e8e394689b430a65d91668415b4d53d.js"></script>
             <noscript>
@@ -111,7 +148,7 @@
             </noscript>
           </p>
 
-          <h6>Counting Nucleotides</h6>
+          <h6 id = "4">Counting Nucleotides</h6>
           <p>
             <script src="https://gist.github.com/jmatty16/c0c243f2f83d857ced1f9866e336a2e0.js"></script>
             <noscript>
@@ -129,7 +166,7 @@
             </noscript>
           </p>
 
-          <h6>Counting Point Mutations</h6>
+          <h6 id = "5">Counting Point Mutations</h6>
           <p>
             <script src="https://gist.github.com/jmatty16/504aad948bca40e76d65995f541ffc89.js"></script>
             <noscript>
@@ -147,7 +184,7 @@
             </noscript>
           </p>
 
-          <h6>Find Motif in DNA</h6>
+          <h6 id = "6">Find Motif in DNA</h6>
           <p>
             <script src="https://gist.github.com/jmatty16/2cc893abc80b4acf3bef08a22ed92190.js"></script>
             <noscript>
@@ -165,7 +202,7 @@
             </noscript>
           </p>
 
-          <h6>RNA Splicing</h6>
+          <h6 id = "7">RNA Splicing</h6>
           <p>
             <script src="https://gist.github.com/jmatty16/e7b535f55725a17b02a2fe7d8884eb04.js"></script>
             <noscript>
@@ -183,7 +220,7 @@
             </noscript>
           </p>
 
-          <h6>Translate RNA</h6>
+          <h6 id = "8">Translate RNA</h6>
           <p>
             <script src="https://gist.github.com/jmatty16/2c94956b5ecd2b33fbe7121807dbdd28.js"></script>
             <noscript>
@@ -201,7 +238,7 @@
             </noscript>
           </p>
 
-          <h6>Transitions and Transversions </h6>
+          <h6 id = "9">Transitions and Transversions </h6>
           <p>
             <script src="https://gist.github.com/jmatty16/f2ff4a4534ca215092be1d61ae7d158d.js"></script>
             <noscript>
@@ -219,7 +256,7 @@
             </noscript>
           </p>
 
-          <h6>Find a Spliced Motif </h6>
+          <h6 id = "10">Find a Spliced Motif </h6>
           <p>
             <script src="https://gist.github.com/jmatty16/750e81ea1ddf21a026bc2bfa5c3e0e69.js"></script>
             <noscript>
@@ -237,7 +274,7 @@
             </noscript>
           </p>
 
-          <h6>Find a Shared Motif </h6>
+          <h6 id = "11">Find a Shared Motif </h6>
           <p>
             <script src="https://gist.github.com/jmatty16/76a676482e3d707c3aec8326b5bc53fc.js"></script>
             <noscript>
@@ -255,7 +292,7 @@
             </noscript>
           </p>
 
-          <h6>Enumerating Gene Orders</h6>
+          <h6 id = "12">Enumerating Gene Orders</h6>
           <p>
             <script src="https://gist.github.com/jmatty16/398df285b5ed3e8df52f9e9fe34e9931.js"></script>
             <noscript>
@@ -273,7 +310,7 @@
             </noscript>
           </p>
 
-          <h6>Inferring mRNA from Protein</h6>
+          <h6 id = "13">Inferring mRNA from Protein</h6>
           <p>
             <script src="https://gist.github.com/jmatty16/1c54ef4abc8f874727cbaf676456a431.js"></script>
             <noscript>
