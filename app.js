@@ -22,6 +22,7 @@ if(helix_height > jumbotron_height){
 
 });
 
+
 //get helix elements
 let helix1 = document.getElementsByClassName('base1');
 let helix2 = document.getElementsByClassName('base2');
