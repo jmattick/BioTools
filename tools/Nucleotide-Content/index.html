@@ -32,7 +32,7 @@
 <h4>DNA Sequence:</h4>
 <textarea id = "inSeq"></textarea>
 <br>
-<button id="myButt" onclick = "myFun()">Calculate</button>
+<button id="myButt" class = "btn btn-lg btn-default" onclick = "myFun()">Calculate</button>
 <h4></h4>
 <table>
 <tr>
@@ -62,11 +62,10 @@
 </div>
 </div>
 
-<!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <script>
 	function myFun() {
@@ -93,10 +92,10 @@
 		$("#Gn").text(count[2]);
 		$("#Tn").text(count[3]);
 		
-		$("#Ap").text(Math.round(10*count[0]/tot)/10);
-		$("#Cp").text(Math.round(10*count[1]/tot)/10);
-		$("#Gp").text(Math.round(10*count[2]/tot)/10);
-		$("#Tp").text(Math.round(10*count[3]/tot)/10);
+		$("#Ap").text(100*Math.round(10*count[0]/tot)/10);
+		$("#Cp").text(100*Math.round(10*count[1]/tot)/10);
+		$("#Gp").text(100*Math.round(10*count[2]/tot)/10);
+		$("#Tp").text(100*Math.round(10*count[3]/tot)/10);
 		
 		$("#sum").text("Total: "+tot+" bp");
 	};
@@ -113,6 +112,9 @@
 	}
 	p {
 	width: 100%;
+	}
+	#myButt {
+		margin: 20px 0;
 	}
 	table {
     border-collapse: collapse;
