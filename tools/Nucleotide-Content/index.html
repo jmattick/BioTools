@@ -92,10 +92,10 @@
 		$("#Gn").text(count[2]);
 		$("#Tn").text(count[3]);
 		
-		$("#Ap").text(100*Math.round(10*count[0]/tot)/10);
-		$("#Cp").text(100*Math.round(10*count[1]/tot)/10);
-		$("#Gp").text(100*Math.round(10*count[2]/tot)/10);
-		$("#Tp").text(100*Math.round(10*count[3]/tot)/10);
+		$("#Ap").text(100*Math.round(1000*count[0]/tot)/1000);
+		$("#Cp").text(100*Math.round(1000*count[1]/tot)/1000);
+		$("#Gp").text(100*Math.round(1000*count[2]/tot)/1000);
+		$("#Tp").text(100*Math.round(1000*count[3]/tot)/1000);
 		
 		$("#sum").text("Total: "+tot+" bp");
 	};
