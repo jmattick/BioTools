@@ -25,6 +25,7 @@
           <a class="nav-item nav-link" href="#top">Home <span class="sr-only">(current)</span></a>
           <a class="nav-item nav-link" href="#tool-list">Tool List</a>
           <a class="nav-item nav-link" href="#python-code">Python Code</a>
+          <a class="nav-item nav-link" href="#R-Tutorials">R Tutorials</a>
           <a class="nav-item nav-link" href="#about">About</a>
           <a class="nav-item nav-link" onclick="night_mode_toggle()">Toggle Theme</a>
         </div>
@@ -332,6 +333,128 @@
 
       </div>
     </section>
+
+    <section id = "R-Tutorials">
+      <div class = "container">
+        <h1>R Tutorials<small class="text-muted"> Utilize R for Bioinformatics</small></h1> 
+        
+        <div id = "heatmaps" class = "card">
+          <div class = "card-header"><b>Making Heatmaps in R</b></div>
+          <div class = "card-body">
+            <p><em>This tutorial is part of an introductory RNAseq workshop I gave to a graduate research department. It's aim is to provide enough information for someone who has never coded to successfully work in R to analyze their data.</em><p>
+
+            <img src = "img/Rplot.png"></img>
+
+            <p><b>Making Heatmaps in R</b></p>
+            <p>Jessica Mattick</p>
+
+            <p><b>R</b> is a language</p>
+
+            <p><b>RStudio</b> is a software that makes using R easier</p>
+
+            <p><b>Heatmap.2</b> is a function in an R package called gplots </p>
+
+            <p>Documentation for heatmap.2: <a href="https://www.rdocumentation.org/packages/gplots/versions/3.0.1/topics/heatmap.2">https://www.rdocumentation.org/packages/gplots/versions/3.0.1/topics/heatmap.2</a></p>
+
+            <p>Great resource for learning R within R: <a href="http://swirlstats.com/students.html">http://swirlstats.com/students.html</a></p>
+
+            <p><b>Set up: </b></p>
+
+            <p>1. <i>Download </i>RStudio: <a href="https://www.rstudio.com/">https://www.rstudio.com/</a></p>
+
+            <p>2. <i>Determine your working directory</i>. This is where R will look for files and output files. To see current working directory , type the following command into the console (do not type the “ &gt;”). This will output your path (example: Documents or Desktop): </p>
+
+            <p>&gt;getwd()</p>
+
+            <p>Output: </p>
+
+            <p>[1] "C:/Users/Lab/Documents"</p>
+
+            <p>3. <i>Change working directory</i> if desired. You can either give a relative or absolute path to the location you want to work in. The following three examples will set a working directory in the same place. NOTE: The folder must exist prior to setting the working directory:</p>
+
+            <p>&gt;setwd(“C:/Users/Lab/Documents/RNAseq”)</p>
+
+            <p>OR</p>
+
+            <p>&gt;setwd(“RNAseq”)</p>
+
+            <p>OR</p>
+
+            <p>&gt;setwd(“../Documents/RNAseq”)</p>
+
+            <p>4. <i>Set up your workspace</i>. You need to install the gplots package and set the requirements that will allow you to make a heatmap. You only need to do this step once per workspace. Type each line one by one and allow the command to finish before starting the next. </p>
+
+            <p>&gt;install.packages("gplots", dependencies = TRUE)</p>
+
+            <p>&gt;library(gplots)</p>
+
+            <p>5. <i>Save your workspace</i> so you don’t need to set up the workspace again. This step is not necessary but will save you time by not having to install gplots again the next time you open RStudio. </p>
+
+            <ul>
+            <li>Click on “Session” in the top toolbar of RStudio</li>
+
+            <li>Click on “Save Workspace As”</li>
+
+            <li>Name the file and set a location. This file will end in .Rdata </li>
+
+            <li>The next time you open R, you can load this workspace: </li>
+
+            <ul>
+            <li>Click on “Session” in the top toolbar of RStudio</li>
+
+            <li>Click on “Load Workspace” </li>
+
+            <li>Select your .Rdata file and then you are set to make heatmaps</li>
+            </ul>
+            </ul>
+
+            <p><b>Making the heatmap:</b></p>
+
+            <p>1. <i>Format your input file.</i> Save your normalized count data in CSV format (Comma-separated values). The first column should be the gene identifiers and the first row should be the different conditions. </p>
+
+            <p>2. <i>Input your countdata into R.</i> If your input file is not saved in your working directory include the path to your file. In the below example countdata is a variable that you can name whatever you wish. After inputting your data, you can view your data by clicking on countdata in the “Environment” window in the top right of Rstudio or by typing view(countdata) in the console. Make sure your countdata looks correct after import. </p>
+
+            <p>&gt;countdata = read.csv("input.csv", sep = ",", row.names = 1)</p>
+
+            <p>3. <i>Create a matrix variable for your data</i>. The variable x can be named anything. </p>
+
+            <p>&gt; x &lt;- as.matrix(countdata)</p>
+
+            <p>4. <i>Create a color variable for your heatmap. </i>You can use colorRampPalette to create a gradient between different colors. This example creates a blue, white, red gradient with red as the upregulated color. </p>
+
+            <p>&gt; hmcols&lt;-colorRampPalette(c("blue","white","red "))(256)</p>
+
+            <p>5. <i>Use heatmap.2 to generate heatmap. </i>There are many parameters that you can change for this function. I suggest reading the documentation. Depending on your matrix, you may need to adjust the margins for your heatmap. Here is an explanation of the parameters used in this example: </p>
+
+            <p>&gt; heatmap.2(x, main = "Heatmap Title", density.info="none", trace="none", scale = "row", symbreaks = FALSE, margins =c(6,12), col=hmcols, dendrogram="row", Colv="NA")</p>
+
+            <p>x – the first parameter should be the name of the matrix variable, in this case x</p>
+
+            <p>main – sets the main title for your heatmap</p>
+
+            <p>density.info - character string indicating whether to superimpose a 'histogram', a 'density' plot, or no plot ('none') on the color-key.</p>
+
+            <p>trace - character string indicating whether a solid "trace" line should be drawn across 'row's or down 'column's, 'both' or 'none'. The distance of the line from the center of each color-cell is proportional to the size of the measurement. Defaults to 'column'.</p>
+
+            <p>scale - character indicating if the values should be centered and scaled in either the row direction or the column direction, or none. The default is "none"</p>
+
+            <p>symbreaks - Boolean indicating whether breaks should be made symmetric about 0. Defaults to TRUE if the data includes negative values, and to FALSE otherwise</p>
+
+            <p>margins - numeric vector of length 2 containing the margins</p>
+
+            <p>col - colors used for the image. Defaults to heat colors (heat.colors).</p>
+
+            <p>dendrogram - character string indicating whether to draw 'none', 'row', 'column' or 'both' dendrograms. Defaults to 'both'. However, if Rowv (or Colv) is FALSE or NULL and dendrogram is 'both', then a warning is issued and Rowv (or Colv) arguments are honoured.</p>
+
+            <p>Colv - determines if and how the column dendrogram should be reordered. Has the options as the Rowv argument above and additionally when x is a square matrix, Colv="Rowv" means that columns should be treated identically to the rows.</p>
+
+            <p>6. <i>View the heatmap in the “Plots” tab </i>in the bottom right window of RStudio. You resize the heatmap in this window and export it as an image or pdf. </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
     <section id = "about">
       <div class = "container">
         <h1>About</h1>
