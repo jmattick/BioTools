@@ -10,6 +10,7 @@ var night_mode_toggle = function(){
     $('nav').addClass('navbar-dark');
     $('nav').removeClass('bg-light');
     $('nav').addClass('bg-dark');
+    $('.card').addClass('bg-dark');
     night_status = !night_status;
   } else {
     $('body').removeClass('night');
@@ -20,6 +21,7 @@ var night_mode_toggle = function(){
     $('nav').removeClass('navbar-dark');
     $('nav').addClass('bg-light');
     $('nav').removeClass('bg-dark');
+    $('.card').removeClass('bg-dark');
     night_status = !night_status;
   }
 }

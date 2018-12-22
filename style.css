@@ -41,6 +41,12 @@ body.night{
 .landing-text.night h1{
   color: black;
 }
+p.night {
+  color: white;
+}
+img {
+  max-width: 100%;
+}
 
 @media only screen and (max-width: 767px) {
 	.landing-text {
