@@ -1,4 +1,4 @@
 # Bioinformatics Solutions as Web Tools
 
-Published: https://jmatty16.github.io/BioTools/
+Published: https://jmattick.github.io/BioTools/
 

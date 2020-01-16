@@ -84,15 +84,15 @@
 
             <p>DNA sequences go through either one or two passes depending on the input sequence and the parameters. The first pass optimization only changes codons if there is an alternate codon that has a lower GC% and an equal or higher frequency. If it is impossible to lower the GC content of the sequence without lowering the frequency, then a second pass optimization will occur. The second pass optimization determines the reduction in frequency of the next best codon at each index of the sequence and replaces the codons starting at the smallest frequency difference until the sequence meets the GC parameter. </p>
 
-            <p><img alt="Program Flowchart" src = "https://jmatty16.github.io/CodonOptimization/img/CodonOptimizationdiagram.png"></p>
+            <p><img alt="Program Flowchart" src = "https://jmattick.github.io/CodonOptimization/img/CodonOptimizationdiagram.png"></p>
 
             <p>Program outputs the original sequence, the first pass optimized sequence, and the second pass optimized sequence. When aligned in a software like <a href = "http://www.jalview.org/">JalView</a> the differences in DNA sequence can be seen but the protein sequences are identical.</p>
 
-            <p><img alt = "sequence alignment" src = "https://jmatty16.github.io/CodonOptimization/img/alignment.png"></p>
+            <p><img alt = "sequence alignment" src = "https://jmattick.github.io/CodonOptimization/img/alignment.png"></p>
 
             <p>Since the first pass optimization increases frequency of codons, when the second pass opimization lowers frequency to reduce GC content, the final sequence can have a higher frequency than the original. </p>
 
-            <p><img alt = "frequency graph" src = "https://jmatty16.github.io/CodonOptimization/img/frequencygraph.png"></p>
+            <p><img alt = "frequency graph" src = "https://jmattick.github.io/CodonOptimization/img/frequencygraph.png"></p>
 
             <p>Usage:</p>
             <ul>
@@ -102,7 +102,7 @@
             </ul>
 
 
-            <p>See docs: <a href = "https://jmatty16.github.io/CodonOptimization/doc/">https://jmatty16.github.io/CodonOptimization/doc/</a></p>
+            <p>See docs: <a href = "https://jmattick.github.io/CodonOptimization/doc/">https://jmattick.github.io/CodonOptimization/doc/</a></p>
             
           </div>
         </div>
@@ -114,7 +114,8 @@
       <div class = "container">
         <h1>Python Code <small class="text-muted"> Python scripts for Bioinformatics</small></h1> 
         <div class="dropdown show">
-  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<!--- 
+ <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Python Code
   </a>
 
@@ -133,12 +134,13 @@
     <a class="dropdown-item" href="#12">Enumerating Gene Orders</a>
     <a class="dropdown-item" href="#13">Inferring mRNA from Protein</a>
   </div>
+--->
 </div>
-        <a href = "https://github.com/jmatty16/Python-Bioinformatics" id = "github-btn" class = "btn btn-secondary extra">Github</a>
-        
+        <a href = "https://github.com/jmattick/Python-Bioinformatics-Scripts" id = "github-btn" class = "btn btn-secondary extra">Github</a>
+<!---
           <h6 id = "1">Convert DNA to RNA</h6>
           <p>
-            <script src="https://gist.github.com/jmatty16/7888cf923f71ef0998afea2df637d707.js"></script>
+            <script src="https://gist.github.com/jmattick/7888cf923f71ef0998afea2df637d707.js"></script>
             <noscript>
               <pre>
                  &lt;p&gt;
@@ -156,7 +158,7 @@
 
           <h6 id = "2">Calculate Protein Molecular Weight</h6>
           <p>
-            <script src="https://gist.github.com/jmatty16/1f7aa8e680e9a469ef42c1b2bc318113.js"></script>
+            <script src="https://gist.github.com/jmattick/1f7aa8e680e9a469ef42c1b2bc318113.js"></script>
             <noscript>
               <pre>
                  &lt;p&gt;
@@ -175,7 +177,7 @@
 
           <h6 id = "3">Calculate highest GC%</h6>
           <p>
-            <script src="https://gist.github.com/jmatty16/1e8e394689b430a65d91668415b4d53d.js"></script>
+            <script src="https://gist.github.com/jmattick/1e8e394689b430a65d91668415b4d53d.js"></script>
             <noscript>
               <pre>
                  &lt;p&gt;
@@ -193,7 +195,7 @@
 
           <h6 id = "4">Counting Nucleotides</h6>
           <p>
-            <script src="https://gist.github.com/jmatty16/c0c243f2f83d857ced1f9866e336a2e0.js"></script>
+            <script src="https://gist.github.com/jmattick/c0c243f2f83d857ced1f9866e336a2e0.js"></script>
             <noscript>
               <pre>
                  &lt;p&gt;
@@ -211,7 +213,7 @@
 
           <h6 id = "5">Counting Point Mutations</h6>
           <p>
-            <script src="https://gist.github.com/jmatty16/504aad948bca40e76d65995f541ffc89.js"></script>
+            <script src="https://gist.github.com/jmattick/504aad948bca40e76d65995f541ffc89.js"></script>
             <noscript>
               <pre>
                  &lt;p&gt;
@@ -229,7 +231,7 @@
 
           <h6 id = "6">Find Motif in DNA</h6>
           <p>
-            <script src="https://gist.github.com/jmatty16/2cc893abc80b4acf3bef08a22ed92190.js"></script>
+            <script src="https://gist.github.com/jmattick/2cc893abc80b4acf3bef08a22ed92190.js"></script>
             <noscript>
               <pre>
                  &lt;p&gt;
@@ -247,7 +249,7 @@
 
           <h6 id = "7">RNA Splicing</h6>
           <p>
-            <script src="https://gist.github.com/jmatty16/e7b535f55725a17b02a2fe7d8884eb04.js"></script>
+            <script src="https://gist.github.com/jmattick/e7b535f55725a17b02a2fe7d8884eb04.js"></script>
             <noscript>
               <pre>
                  &lt;p&gt;
@@ -265,7 +267,7 @@
 
           <h6 id = "8">Translate RNA</h6>
           <p>
-            <script src="https://gist.github.com/jmatty16/2c94956b5ecd2b33fbe7121807dbdd28.js"></script>
+            <script src="https://gist.github.com/jmattick/2c94956b5ecd2b33fbe7121807dbdd28.js"></script>
             <noscript>
               <pre>
                  &lt;p&gt;
@@ -283,7 +285,7 @@
 
           <h6 id = "9">Transitions and Transversions </h6>
           <p>
-            <script src="https://gist.github.com/jmatty16/f2ff4a4534ca215092be1d61ae7d158d.js"></script>
+            <script src="https://gist.github.com/jmattick/f2ff4a4534ca215092be1d61ae7d158d.js"></script>
             <noscript>
               <pre>
                  &lt;p&gt;
@@ -301,7 +303,7 @@
 
           <h6 id = "10">Find a Spliced Motif </h6>
           <p>
-            <script src="https://gist.github.com/jmatty16/750e81ea1ddf21a026bc2bfa5c3e0e69.js"></script>
+            <script src="https://gist.github.com/jmattick/750e81ea1ddf21a026bc2bfa5c3e0e69.js"></script>
             <noscript>
               <pre>
                  &lt;p&gt;
@@ -319,7 +321,7 @@
 
           <h6 id = "11">Find a Shared Motif </h6>
           <p>
-            <script src="https://gist.github.com/jmatty16/76a676482e3d707c3aec8326b5bc53fc.js"></script>
+            <script src="https://gist.github.com/jmattick/76a676482e3d707c3aec8326b5bc53fc.js"></script>
             <noscript>
               <pre>
                  &lt;p&gt;
@@ -337,7 +339,7 @@
 
           <h6 id = "12">Enumerating Gene Orders</h6>
           <p>
-            <script src="https://gist.github.com/jmatty16/398df285b5ed3e8df52f9e9fe34e9931.js"></script>
+            <script src="https://gist.github.com/jmattick/398df285b5ed3e8df52f9e9fe34e9931.js"></script>
             <noscript>
               <pre>
                  &lt;p&gt;
@@ -355,7 +357,7 @@
 
           <h6 id = "13">Inferring mRNA from Protein</h6>
           <p>
-            <script src="https://gist.github.com/jmatty16/1c54ef4abc8f874727cbaf676456a431.js"></script>
+            <script src="https://gist.github.com/jmattick/1c54ef4abc8f874727cbaf676456a431.js"></script>
             <noscript>
               <pre>
                  &lt;p&gt;
@@ -371,7 +373,7 @@
             </noscript>
           </p>
 
-
+--->
       </div>
     </section>
 
@@ -499,7 +501,7 @@
     <section id = "about">
       <div class = "container">
         <h1>About</h1>
-        <a href = "https://github.com/jmatty16">See my work on Github</a>
+        <a href = "https://github.com/jmattick">See my work on Github</a>
       </div>
     </section>
 
